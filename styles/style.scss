@@ -1,0 +1,31 @@
+@import "default";
+
+$header1: 8rem;
+$header2: 5rem;
+
+@mixin flex($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+#logo {
+  font-family: "Russo One", sans-serif;
+  text-align: center;
+  font-size: $header1;
+  text-transform: uppercase;
+  letter-spacing: 2rem;
+  padding: 2rem;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+i,
+svg {
+  pointer-events: none;
+}
+
+@import "sequencer";

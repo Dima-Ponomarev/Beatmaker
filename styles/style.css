@@ -1,0 +1,294 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 62.5%;
+  line-height: 1;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+#logo {
+  font-family: "Russo One", sans-serif;
+  text-align: center;
+  font-size: 8rem;
+  text-transform: uppercase;
+  letter-spacing: 2rem;
+  padding: 2rem;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+i,
+svg {
+  pointer-events: none;
+}
+
+h2 {
+  font-size: 5rem;
+}
+
+.sequencer {
+  min-height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.kick-pad,
+.snare-pad,
+.hihat-pad {
+  width: 8rem;
+  height: 8rem;
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.kick-pad {
+  background: #93acdb;
+}
+
+.snare-pad {
+  background: #e49e9e;
+}
+
+.hihat-pad {
+  background: #b7e2a6;
+}
+
+.kick-pad.active {
+  background: #1658d3;
+}
+
+.snare-pad.active {
+  background: #e23232;
+}
+
+.hihat-pad.active {
+  background: #60dd2e;
+}
+
+.kick-track,
+.snare-track,
+.hihat-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 5rem;
+  width: 80%;
+}
+
+.kick,
+.snare,
+.hihat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 0rem 2rem;
+}
+
+.controls button {
+  padding: 1.5rem;
+  background: #5a5959;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.pad {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.play {
+  padding: 2rem 4rem;
+  font-size: 2.4rem;
+  background: #5a5959;
+  color: white;
+  margin-top: 4.5rem;
+}
+
+select {
+  font-size: 2rem;
+  padding: 1rem;
+  border: 0.1rem solid black;
+}
+
+.mute.active {
+  background: #c9c9c9;
+}
+
+.tempo {
+  margin: 3rem;
+  width: 30%;
+}
+
+.tempo p {
+  font-size: 2rem;
+  margin: 2rem;
+  text-align: center;
+}
+
+.tempo-slider {
+  padding: 0.3rem;
+  -webkit-appearance: none;
+  margin: 1rem 0rem;
+  width: 100%;
+  padding: relative;
+  background: #5a5959;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+
+@-webkit-keyframes playTrack {
+  form {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
+@keyframes playTrack {
+  form {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+/*# sourceMappingURL=style.css.map */
